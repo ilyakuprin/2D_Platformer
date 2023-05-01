@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d99b4def47f480f40b0160927a00d7aa
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _grass: {fileID: 8300000, guid: 88381c1b2d6a1004a847c4d069a4616f, type: 3}
+  - _stones: {fileID: 8300000, guid: 0f6b7d59f937b294c9ac43e8169d60d6, type: 3}
+  - _wood: {fileID: 8300000, guid: 4e66a0c3aee1d604dbfa63209ab0dc50, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
