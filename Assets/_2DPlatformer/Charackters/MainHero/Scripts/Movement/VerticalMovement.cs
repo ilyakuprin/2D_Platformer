@@ -6,6 +6,9 @@ namespace Platformer2D
     [RequireComponent(typeof(PlayerInput), typeof(VerticalAnimation))]
     public class VerticalMovement : MonoBehaviour, IMainHeroAction
     {
+        public delegate void ToMove();
+        public event ToMove Moved;
+
         [SerializeField, Range(1, 10)] private float _jumpForce;
         [SerializeField, Range(1, 3)] private int _numberJumps;
         [SerializeField, Range(0.01f, 0.2f)] private float _jumpCircleRadius;
@@ -20,13 +23,10 @@ namespace Platformer2D
         private int _layerContact;
         private readonly float _velocityError = 0.01f;
 
-        private VerticalAnimation _verticalAnimation;
-
         private void Awake()
         {
             _layersWhereCantJump = new LayersWhereCantJump(new HashLayers());
             _rigidbody = GetComponent<Rigidbody2D>();
-            _verticalAnimation = new VerticalAnimation(GetComponent<Animator>(), _velocityError);
         }
 
         public void Executive(InputData inputData)
@@ -42,9 +42,9 @@ namespace Platformer2D
             {
                 _gottaJump = true;
                 _currentNumberJumps--;
-            }            
+            }
 
-            _verticalAnimation.Animation(_rigidbody.velocity.y);
+            Moved?.Invoke();
         }
         private void FixedUpdate()
         {

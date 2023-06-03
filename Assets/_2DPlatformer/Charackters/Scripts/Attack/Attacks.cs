@@ -5,6 +5,8 @@ namespace Platformer2D
 {
     public abstract class Attacks : MonoBehaviour
     {
+        public delegate void ToAttack();
+
         [SerializeField, Range(0.1f, 2)] protected float attackRadius;
         [SerializeField] protected Transform attackPoint;
         [SerializeField] protected float rechargeTime;

@@ -4218,7 +4218,7 @@ GameObject:
   - component: {fileID: 1225210217}
   m_Layer: 6
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Stones
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4631,7 +4631,7 @@ GameObject:
   - component: {fileID: 1350973339}
   m_Layer: 6
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Stones
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5056,7 +5056,7 @@ GameObject:
   - component: {fileID: 1487112005}
   m_Layer: 6
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Stones
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5356,7 +5356,7 @@ GameObject:
   - component: {fileID: 1557584722}
   m_Layer: 6
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Stones
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5587,7 +5587,7 @@ GameObject:
   - component: {fileID: 1746132348}
   m_Layer: 6
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Stones
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -2,24 +2,26 @@ using UnityEngine;
 
 namespace Platformer2D
 {
-    public class VerticalAnimation
+    [RequireComponent(typeof(VerticalMovement))]
+    public class VerticalAnimation : MonoBehaviour
     {
-        private readonly Animator _animator;
+        private Animator _animator;
+        private Rigidbody2D _rigidbody2D;
         private readonly HashAnimations _hashAnimations = new HashAnimations();
-        private readonly float _velocityError;
+        private readonly float _velocityError = 0.01f;
         private bool _inJump = false;
         private bool _inFall = false;
         private float _rigidbodyVelocityY;
 
-        public VerticalAnimation(Animator animator, float velocityError)
+        private void Awake()
         {
-            _animator = animator;
-            _velocityError = velocityError;
+            _animator = GetComponent<Animator>();
+            _rigidbody2D = GetComponent<Rigidbody2D>();
         }
 
-        public void Animation(float rigidbodyVelocityY)
+        public void PlayAnimation()
         {
-            _rigidbodyVelocityY = rigidbodyVelocityY;
+            _rigidbodyVelocityY = _rigidbody2D.velocity.y;
 
             if (!_inJump && _rigidbodyVelocityY > _velocityError)
             {
@@ -48,6 +50,16 @@ namespace Platformer2D
                 _inFall = false;
                 _inJump = false;
             }
+        }
+
+        private void OnEnable()
+        {
+            GetComponent<VerticalMovement>().Moved += PlayAnimation;
+        }
+
+        private void OnDisable()
+        {
+            GetComponent<VerticalMovement>().Moved -= PlayAnimation;
         }
     }
 }

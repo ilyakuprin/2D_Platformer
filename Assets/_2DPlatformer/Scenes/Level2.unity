@@ -793,7 +793,7 @@ GameObject:
   - component: {fileID: 295199147}
   m_Layer: 6
   m_Name: tileset_7 (1)
-  m_TagString: Untagged
+  m_TagString: Stones
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1264,7 +1264,7 @@ GameObject:
   - component: {fileID: 386005220}
   m_Layer: 6
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Stones
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1879,7 +1879,7 @@ GameObject:
   - component: {fileID: 726051263}
   m_Layer: 6
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1969,7 +1969,7 @@ GameObject:
   - component: {fileID: 737451339}
   m_Layer: 6
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2138,7 +2138,7 @@ GameObject:
   - component: {fileID: 752951301}
   m_Layer: 6
   m_Name: tileset_11
-  m_TagString: Untagged
+  m_TagString: Stones
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2533,7 +2533,7 @@ GameObject:
   - component: {fileID: 908948445}
   m_Layer: 6
   m_Name: tileset_1
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3197,7 +3197,7 @@ GameObject:
   - component: {fileID: 1278126710}
   m_Layer: 6
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Stones
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3856,7 +3856,7 @@ GameObject:
   - component: {fileID: 1564369701}
   m_Layer: 6
   m_Name: tileset_11 (1)
-  m_TagString: Untagged
+  m_TagString: Stones
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

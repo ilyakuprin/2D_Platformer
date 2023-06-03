@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 1a36b9cc078f9a04a83fa75bbd7f4521
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _playerTrackingScript: {instanceID: 0}
+  - _attackAnimation: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

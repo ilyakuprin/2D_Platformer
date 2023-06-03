@@ -6,17 +6,14 @@ namespace Platformer2D
     [RequireComponent(typeof(Animator), typeof(VisibilityZone))]
     public class EnemyMeleeAttack : MeleeAttack
     {
-        [SerializeField] private Behaviour _playerTrackingScript;
-        [SerializeField] private AnimationClip _attackAnimation;
-        private Animator _animator;
+        public event ToAttack Attacked;
+
         private VisibilityZone _visibilityZone;
-        private readonly HashAnimations _hashAnimations = new HashAnimations();
 
         protected override void Awake()
         {
             base.Awake();
 
-            _animator = GetComponent<Animator>();
             _visibilityZone = GetComponent<VisibilityZone>();
         }
 
@@ -29,14 +26,14 @@ namespace Platformer2D
                     if (_enemy.gameObject.GetComponent<PlayerInput>().enabled == true)
                     {
                         StartCoroutine(Recharge());
-                        _animator.SetTrigger(_hashAnimations.Attack1);
-                        StartCoroutine(EnabledLookTowardsPlayer());
+
+                        Attacked?.Invoke();
                     }
                 }
             }
         }
 
-        private IEnumerator EnabledLookTowardsPlayer()
+        /*private IEnumerator EnabledLookTowardsPlayer()
         {
             _playerTrackingScript.enabled = false;
 
@@ -52,7 +49,7 @@ namespace Platformer2D
             {
                 yield return _playerTrackingScript.enabled = true;
             }
-        }
+        }*/
 
         public void EnemyAttackMakeDamageEvent()
         {

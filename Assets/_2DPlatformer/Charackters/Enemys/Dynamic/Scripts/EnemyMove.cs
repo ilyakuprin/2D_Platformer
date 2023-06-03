@@ -9,7 +9,6 @@ namespace Platformer2D
 
         [SerializeField, Range(0.1f, 10)] private float _speed;
         private Rigidbody2D _rigidbody;
-        private HorizontalAnimation _horizontalAnimation;
         private EnemyFields _enemyFields;
         private VisibilityZone _visibilityZone;
         private SpriteRenderer _spriteRenderer;
@@ -25,20 +24,6 @@ namespace Platformer2D
             _enemyFields = GetComponent<EnemyFields>();
             _visibilityZone = GetComponent<VisibilityZone>();
             _spriteRenderer = GetComponent<SpriteRenderer>();
-
-            float speedError = 0.01f;
-            _rigidbody = GetComponent<Rigidbody2D>();
-            _horizontalAnimation = new HorizontalAnimation(
-                GetComponent<SpriteRenderer>(),
-                GetComponent<Animator>(),
-                _rigidbody,
-                speedError,
-                _enemyFields.FirePoint);
-        }
-
-        protected virtual void Update()
-        {
-            _horizontalAnimation.PlayAnimation();
         }
 
         protected virtual void FixedUpdate()

@@ -2,34 +2,33 @@ using UnityEngine;
 
 namespace Platformer2D
 {
-    public class HorizontalAnimation
+    [RequireComponent(typeof(HorizontalMovement))]
+    public class HorizontalAnimation : MonoBehaviour
     {
-        private readonly GameObject _firePoint;
-        private readonly SpriteRenderer _spriteRenderer;
-        private readonly Animator _animator;
-        private readonly Rigidbody2D _rigidbody;
+        [SerializeField] private GameObject _firePoint;
+        private SpriteRenderer _spriteRenderer;
+        private Animator _animator;
+        private Rigidbody2D _rigidbody;
         private readonly HashAnimations _hashAnimations = new HashAnimations();
 
-        private readonly float _speedError;
-        private readonly float _firePointX;
-        private readonly float _firePointY;
-        private readonly float _firePointZ;
+        private readonly float _speedError = 0.01f;
+        private float _firePointX;
+        private float _firePointY;
+        private float _firePointZ;
 
-        public HorizontalAnimation(SpriteRenderer spriteRenderer, Animator animator, Rigidbody2D rigidbody, float speedError, GameObject firePoint)
+        private void Awake()
         {
-            _spriteRenderer = spriteRenderer;
-            _animator = animator;
-            _rigidbody = rigidbody;
-            _speedError = speedError;
-            _firePoint = firePoint;
+            _spriteRenderer = GetComponent<SpriteRenderer>();
+            _animator = GetComponent<Animator>();
+            _rigidbody = GetComponent<Rigidbody2D>();
 
-            Vector3 vectorPosition = firePoint.transform.localPosition;
+            Vector3 vectorPosition = _firePoint.transform.localPosition;
             _firePointX = vectorPosition.x;
             _firePointY = vectorPosition.y;
             _firePointZ = vectorPosition.z;
         }
 
-        public void PlayAnimation()
+        private void PlayAnimation()
         {
             if (_rigidbody.velocity.x > _speedError)
             {
@@ -47,6 +46,16 @@ namespace Platformer2D
             {
                 _animator.SetBool(_hashAnimations.Run, false);
             }
+        }
+
+        private void OnEnable()
+        {
+            GetComponent<HorizontalMovement>().Moved += PlayAnimation;
+        }
+
+        private void OnDisable()
+        {
+            GetComponent<HorizontalMovement>().Moved -= PlayAnimation;
         }
     }
 }
