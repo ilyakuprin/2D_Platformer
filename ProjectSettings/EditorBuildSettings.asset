@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_2DPlatformer/Scenes/MainMenu.unity
+    path: Assets/_JumpOrDie/Scenes/MainMenu.unity
     guid: 0991f23fa806f214990af01d2ee72fcc
   - enabled: 1
-    path: Assets/_2DPlatformer/Scenes/Level1.unity
+    path: Assets/_JumpOrDie/Scenes/Level1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/_2DPlatformer/Scenes/Level2.unity
+    path: Assets/_JumpOrDie/Scenes/Level2.unity
     guid: d33a0880595870f4db51711351612d14
   - enabled: 1
-    path: Assets/_2DPlatformer/Scenes/Level3.unity
+    path: Assets/_JumpOrDie/Scenes/Level3.unity
     guid: 78f0c1667ee65a749a0a38b14ab108ff
   m_configObjects: {}
