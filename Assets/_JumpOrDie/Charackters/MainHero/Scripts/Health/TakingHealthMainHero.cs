@@ -21,15 +21,7 @@ namespace JumpOrDie
 
             if (currentHeal < maximumHeal)
             {
-                if (currentHeal + heal < maximumHeal)
-                {
-                    _health.CurrentValue += heal;
-                }
-                else
-                {
-                    _health.CurrentValue = maximumHeal;
-                }
-
+                _health.Increase(heal);
                 _healingReceiving.TakeHeal(_health.CurrentValue, maximumHeal, healingPotion);
             }
         }

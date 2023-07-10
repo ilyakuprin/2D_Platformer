@@ -18,15 +18,15 @@ namespace JumpOrDie
 
         public void TakeDamage(int damage)
         {
-            _health.CurrentValue -= damage;
+            _health.Reduce(damage);
 
-            if (_health.CurrentValue <= 0)
+            if(!_health.Dead())
             {
-                _deathEnemy.Die();
+                _damageReceived.TakeDamage(_health.CurrentValue, _health.MaximumValue);
             }
             else
             {
-                _damageReceived.TakeDamage(_health.CurrentValue, _health.MaximumValue);
+                _deathEnemy.Die();
             }
         }
     }

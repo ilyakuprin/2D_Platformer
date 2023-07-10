@@ -4,7 +4,7 @@ namespace JumpOrDie
     {
         private readonly int _minimumHealth = 1;
 
-        protected virtual void Start()
+        private void Start()
         {
             if (CurrentValue < MaximumValue && CurrentValue > 0)
             {
@@ -12,7 +12,19 @@ namespace JumpOrDie
             }
         }
 
-        protected virtual void OnValidate()
+        public bool Dead()
+        {
+            if (CurrentValue <= 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        protected override void OnValidate()
         {
             if (CurrentValue < _minimumHealth)
             {

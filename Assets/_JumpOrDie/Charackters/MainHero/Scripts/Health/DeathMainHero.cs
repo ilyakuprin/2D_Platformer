@@ -55,7 +55,7 @@ namespace JumpOrDie
             GetUIFields.HealthBar.fillAmount = 1;
             EnDisComponents(false);
             transform.position = _lastSavePosition.SavePosition;
-            _health.CurrentValue = _health.MaximumValue;
+            _health.Increase(_health.MaximumValue);
 
             GetComponent<DamageReceived>().ChangeHealBar(_health.MaximumValue, _health.MaximumValue);
         }

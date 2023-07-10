@@ -1173,10 +1173,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GoblinComponents
       objectReference: {fileID: 0}
-    - target: {fileID: 8222247564938878192, guid: 792f475f0f8590147b902c48c4c11e55, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.21
-      objectReference: {fileID: 0}
     - target: {fileID: 8222247565001343378, guid: 792f475f0f8590147b902c48c4c11e55, type: 3}
       propertyPath: _constantsGradient
       value: 
@@ -1185,18 +1181,6 @@ PrefabInstance:
       propertyPath: _playerTransform
       value: 
       objectReference: {fileID: 209606523}
-    - target: {fileID: 8222247565001343589, guid: 792f475f0f8590147b902c48c4c11e55, type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8222247565001343594, guid: 792f475f0f8590147b902c48c4c11e55, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.55
-      objectReference: {fileID: 0}
-    - target: {fileID: 8222247565663752139, guid: 792f475f0f8590147b902c48c4c11e55, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 792f475f0f8590147b902c48c4c11e55, type: 3}
 --- !u!1 &385094727
@@ -7565,10 +7549,6 @@ PrefabInstance:
       propertyPath: _canvasDeath
       value: 
       objectReference: {fileID: 749707281}
-    - target: {fileID: 7542892251202645262, guid: ed70efafb38a0b543a8b050d9883a640, type: 3}
-      propertyPath: _heartController
-      value: 
-      objectReference: {fileID: 749707283}
     - target: {fileID: 7542892251202645489, guid: ed70efafb38a0b543a8b050d9883a640, type: 3}
       propertyPath: m_RootOrder
       value: 2
