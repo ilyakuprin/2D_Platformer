@@ -4,30 +4,32 @@ using UnityEngine;
 namespace JumpOrDie
 {
     [RequireComponent(typeof(LastSavePosition), typeof(Health), typeof(UIFieldsMainHero))]
+    [RequireComponent(typeof(TakingDamage))]
     public class DeathMainHero : HealthChangeVisualization
     {
         [SerializeField] private GameObject _canvasDeath;
         [SerializeField] private float _timeAfterDeath;
         [SerializeField] private Behaviour[] _componentsOff;
         private LastSavePosition _lastSavePosition;
-        private Health _health;
         private UIFieldsMainHero _uiFieldsMainHero;
 
         protected override void Awake()
         {
             base.Awake();
             _lastSavePosition = GetComponent<LastSavePosition>();
-            _health = GetComponent<Health>();
             _uiFieldsMainHero = GetComponent<UIFieldsMainHero>();
         }
 
         public void Die()
         {
-            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            GetComponent<AudioSource>().Play();
+            if (GetHealth.Dead())
+            {
+                GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                GetComponent<AudioSource>().Play();
 
-            _uiFieldsMainHero.HeartController.SubtractHeart();
-            StartCoroutine(Death());
+                _uiFieldsMainHero.HeartController.SubtractHeart();
+                StartCoroutine(Death());
+            }
         }
 
         private IEnumerator Death()
@@ -55,9 +57,9 @@ namespace JumpOrDie
             GetUIFields.HealthBar.fillAmount = 1;
             EnDisComponents(false);
             transform.position = _lastSavePosition.SavePosition;
-            _health.Increase(_health.MaximumValue);
+            GetHealth.Increase(GetHealth.MaximumValue);
 
-            GetComponent<DamageReceived>().ChangeHealBar(_health.MaximumValue, _health.MaximumValue);
+            GetComponent<DamageReceived>().ChangeHealBar();
         }
 
         private void FinalDeath()
@@ -72,6 +74,16 @@ namespace JumpOrDie
             {
                 _componentsOff[i].enabled = !isDeath;
             }
+        }
+
+        private void OnEnable()
+        {
+            GetComponent<TakingDamage>().TookDamage += Die;
+        }
+
+        private void OnDisable()
+        {
+            GetComponent<TakingDamage>().TookDamage -= Die;
         }
     }
 }

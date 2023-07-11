@@ -157,10 +157,10 @@ GameObject:
   - component: {fileID: 4270345613955261725}
   - component: {fileID: 4270345613955261726}
   - component: {fileID: 4270345613955261727}
-  - component: {fileID: 4270345613955261718}
   - component: {fileID: 6296992101844118361}
   - component: {fileID: 7371867741897186296}
   - component: {fileID: 1365650770}
+  - component: {fileID: 1593163342329670097}
   m_Layer: 8
   m_Name: Skeleton
   m_TagString: Untagged
@@ -345,18 +345,6 @@ MonoBehaviour:
   - {fileID: 4270345613955261720}
   - {fileID: 4270345613955261721}
   _statsCanvas: {fileID: 4270345612456080239}
---- !u!114 &4270345613955261718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4270345613955261719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5f75ab75666c4c4190845c4b5807a01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6296992101844118361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,6 +389,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerTrackingScript: {fileID: 4270345613955261720}
   _attackAnimation: {fileID: 7400000, guid: cbfab649b8150074ca1a1072245e659b, type: 2}
+--- !u!114 &1593163342329670097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4270345613955261719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2882b5077c5e1646bd19eadc76c26c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7328373699369245089
 PrefabInstance:
   m_ObjectHideFlags: 0

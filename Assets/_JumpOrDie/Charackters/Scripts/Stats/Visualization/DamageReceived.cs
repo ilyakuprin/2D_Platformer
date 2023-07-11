@@ -1,11 +1,27 @@
+using UnityEngine;
+
 namespace JumpOrDie
 {
+    [RequireComponent(typeof(TakingDamage))]
     public class DamageReceived : HealthChange
     {
-        public void TakeDamage(int currentHealth, int maxHealth)
+        public void TakeDamage()
         {
-            ChangeHealBar(currentHealth, maxHealth);
-            GetAnimator.SetTrigger(hashAnimations.TakeHit);
+            if (!GetHealth.Dead())
+            {
+                ChangeHealBar();
+                GetAnimator.SetTrigger(hashAnimations.TakeHit);
+            }
+        }
+
+        private void OnEnable()
+        {
+            GetComponent<TakingDamage>().TookDamage += TakeDamage;
+        }
+
+        private void OnDisable()
+        {
+            GetComponent<TakingDamage>().TookDamage -= TakeDamage;
         }
     }
 }

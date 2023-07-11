@@ -40,7 +40,7 @@ namespace JumpOrDie
             {
                 for (int i = 0; i < _enemies.Length; i++)
                 {
-                    _enemies[i].GetComponent<TakingDamageEnemy>().TakeDamage(attackPower);
+                    _enemies[i].GetComponent<TakingDamage>().TakeDamage(attackPower);
                 }
             }
         }

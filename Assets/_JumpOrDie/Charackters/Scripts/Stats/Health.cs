@@ -8,7 +8,7 @@ namespace JumpOrDie
         {
             if (CurrentValue < MaximumValue && CurrentValue > 0)
             {
-                GetComponent<HealthChange>().ChangeHealBar(CurrentValue, MaximumValue);
+                GetComponent<HealthChange>().ChangeHealBar();
             }
         }
 

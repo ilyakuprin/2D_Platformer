@@ -33,29 +33,11 @@ namespace JumpOrDie
             }
         }
 
-        /*private IEnumerator EnabledLookTowardsPlayer()
-        {
-            _playerTrackingScript.enabled = false;
-
-            if (TryGetComponent(out Rigidbody2D rigidbody))
-            {
-                rigidbody.velocity = Vector2.zero;
-                _animator.SetBool(_hashAnimations.Run, false);
-            }
-
-            yield return new WaitForSeconds(_attackAnimation.length);
-
-            if (enabled)
-            {
-                yield return _playerTrackingScript.enabled = true;
-            }
-        }*/
-
         public void EnemyAttackMakeDamageEvent()
         {
             if (_enemy != null)
             {
-                _enemy.GetComponent<TakingDamageMainHero>().TakeDamage(attackPower);
+                _enemy.GetComponent<TakingDamage>().TakeDamage(attackPower);
             }
         }
     }

@@ -2,9 +2,9 @@ namespace JumpOrDie
 {
     public abstract class HealthChange : HealthChangeVisualization
     {
-        public void ChangeHealBar(int currentHealth, int maxHealth)
+        public void ChangeHealBar()
         {
-            float valueCurrentHealth = (float)currentHealth / maxHealth;
+            float valueCurrentHealth = (float)GetHealth.CurrentValue / GetHealth.MaximumValue;
             GetUIFields.HealthBar.fillAmount = valueCurrentHealth;
             GetUIFields.HealthBar.color = GetUIFields.ConstantsGradient.HealthBar.Evaluate(valueCurrentHealth);
         }

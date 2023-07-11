@@ -70,15 +70,16 @@
     <Compile Include="Assets\_JumpOrDie\UI\Menu\Scripts\MainMenu\LevelManager.cs" />
     <Compile Include="Assets\_JumpOrDie\Charackters\Scripts\Stats\Visualization\HealingReceiving.cs" />
     <Compile Include="Assets\_JumpOrDie\Environment\Items\Heart\TouchHeart.cs" />
+    <Compile Include="Assets\_JumpOrDie\Charackters\MainHero\Scripts\Movement\Animations\HorizontalAnimationMainHero.cs" />
     <Compile Include="Assets\_JumpOrDie\Charackters\Scripts\Stats\Visualization\HealthChangeVisualization.cs" />
     <Compile Include="Assets\_JumpOrDie\Charackters\Enemys\Dynamic\Scripts\EnemyMove.cs" />
     <Compile Include="Assets\_JumpOrDie\Charackters\MainHero\Scripts\Attacks\Attack1Audio.cs" />
     <Compile Include="Assets\_JumpOrDie\Charackters\MainHero\Scripts\Health\TakingHeartMainHero.cs" />
-    <Compile Include="Assets\_JumpOrDie\Charackters\MainHero\Scripts\Health\TakingDamageMainHero.cs" />
     <Compile Include="Assets\_JumpOrDie\Scripts\DeathCollider.cs" />
     <Compile Include="Assets\_JumpOrDie\Charackters\MainHero\Scripts\Input\IMainHeroAction.cs" />
     <Compile Include="Assets\_JumpOrDie\Charackters\MainHero\Scripts\Health\TakingHealthMainHero.cs" />
     <Compile Include="Assets\_JumpOrDie\Charackters\Scripts\Stats\Health.cs" />
+    <Compile Include="Assets\_JumpOrDie\Charackters\Enemys\Dynamic\Goblin\Scripts\HorizontalAnimationGoblin.cs" />
     <Compile Include="Assets\_JumpOrDie\Scenes\Scripts\MoveToNextLevel.cs" />
     <Compile Include="Assets\_JumpOrDie\Charackters\MainHero\Scripts\Movement\LayersWhereCantJump.cs" />
     <Compile Include="Assets\_JumpOrDie\Charackters\MainHero\Scripts\Attacks\Attack1.cs" />
@@ -104,7 +105,6 @@
     <Compile Include="Assets\_JumpOrDie\UI\Menu\Scripts\MainMenu\MainMenu.cs" />
     <Compile Include="Assets\_JumpOrDie\Scripts\Constants\StringsFields\StringTagName.cs" />
     <Compile Include="Assets\_JumpOrDie\Environment\Background\Scripts\Parallax.cs" />
-    <Compile Include="Assets\_JumpOrDie\Charackters\Enemys\Scripts\TakingDamageEnemy.cs" />
     <Compile Include="Assets\_JumpOrDie\Charackters\Enemys\Dynamic\Scripts\EnemyFields.cs" />
     <Compile Include="Assets\_JumpOrDie\Charackters\Scripts\Stats\Visualization\HealthChange.cs" />
     <Compile Include="Assets\_JumpOrDie\Environment\Items\Scripts\InteractionWithItems.cs" />
@@ -123,8 +123,7 @@
     <Compile Include="Assets\_JumpOrDie\UI\Menu\Scripts\ChangeAudioSlider.cs" />
     <Compile Include="Assets\_JumpOrDie\Charackters\MainHero\Scripts\Movement\Animations\VerticalAnimation.cs" />
     <Compile Include="Assets\_JumpOrDie\UI\Game\Scripts\UIFields.cs" />
-    <Compile Include="Assets\_JumpOrDie\Charackters\MainHero\Scripts\Movement\Animations\HorizontalAnimationMainHero.cs" />
-    <Compile Include="Assets\_JumpOrDie\Charackters\Enemys\Dynamic\Goblin\Scripts\HorizontalAnimationGoblin.cs" />
+    <Compile Include="Assets\_JumpOrDie\Charackters\Scripts\TakingDamage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
