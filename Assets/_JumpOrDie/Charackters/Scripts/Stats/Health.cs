@@ -1,14 +1,40 @@
+using UnityEngine;
+
 namespace JumpOrDie
 {
-    public class Health : Stats
+    public class Health : MonoBehaviour
     {
+        [SerializeField] private int _currentValue;
+        [SerializeField] private int _maximumValue;
+
         private readonly int _minimumHealth = 1;
+
+        public int CurrentValue { get => _currentValue; }
+        public int MaximumValue { get => _maximumValue; }
 
         private void Start()
         {
-            if (CurrentValue < MaximumValue && CurrentValue > 0)
+            if (_currentValue < _maximumValue && _currentValue > 0)
             {
                 GetComponent<HealthChange>().ChangeHealBar();
+            }
+        }
+
+        public void Reduce(int damage)
+        {
+            _currentValue -= damage;
+            if (_currentValue < 0)
+            {
+                _currentValue = 0;
+            }
+        }
+
+        public void Increase(int recovery)
+        {
+            _currentValue += recovery;
+            if (_currentValue > _maximumValue)
+            {
+                _currentValue = _maximumValue;
             }
         }
 
@@ -24,15 +50,15 @@ namespace JumpOrDie
             }
         }
 
-        protected override void OnValidate()
+        private void OnValidate()
         {
-            if (CurrentValue < _minimumHealth)
+            if (_currentValue < _minimumHealth)
             {
-                CurrentValue = _minimumHealth;
+                _currentValue = _minimumHealth;
             }
-            else if (CurrentValue > MaximumValue)
+            else if (_currentValue > _maximumValue)
             {
-                CurrentValue = MaximumValue;
+                _currentValue = _maximumValue;
             }
         }
     }

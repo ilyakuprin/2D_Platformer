@@ -75,6 +75,7 @@
     <Compile Include="Assets\_JumpOrDie\Charackters\Enemys\Dynamic\Scripts\EnemyMove.cs" />
     <Compile Include="Assets\_JumpOrDie\Charackters\MainHero\Scripts\Attacks\Attack1Audio.cs" />
     <Compile Include="Assets\_JumpOrDie\Charackters\MainHero\Scripts\Health\TakingHeartMainHero.cs" />
+    <Compile Include="Assets\_JumpOrDie\Charackters\MainHero\Scripts\Health\TakingDamageMainHero.cs" />
     <Compile Include="Assets\_JumpOrDie\Scripts\DeathCollider.cs" />
     <Compile Include="Assets\_JumpOrDie\Charackters\MainHero\Scripts\Input\IMainHeroAction.cs" />
     <Compile Include="Assets\_JumpOrDie\Charackters\MainHero\Scripts\Health\TakingHealthMainHero.cs" />
@@ -100,11 +101,12 @@
     <Compile Include="Assets\_JumpOrDie\Scripts\Constants\ConstantsGradient.cs" />
     <Compile Include="Assets\_JumpOrDie\UI\Game\Scripts\DeathCanvas.cs" />
     <Compile Include="Assets\_JumpOrDie\Charackters\MainHero\Scripts\Movement\HorizontalMovement.cs" />
+    <Compile Include="Assets\_JumpOrDie\Charackters\Scripts\TakingDamage.cs" />
     <Compile Include="Assets\_JumpOrDie\Charackters\Enemys\Dynamic\Scripts\IdleHorizontalMove.cs" />
-    <Compile Include="Assets\_JumpOrDie\Charackters\Scripts\Stats\Stats.cs" />
     <Compile Include="Assets\_JumpOrDie\UI\Menu\Scripts\MainMenu\MainMenu.cs" />
     <Compile Include="Assets\_JumpOrDie\Scripts\Constants\StringsFields\StringTagName.cs" />
     <Compile Include="Assets\_JumpOrDie\Environment\Background\Scripts\Parallax.cs" />
+    <Compile Include="Assets\_JumpOrDie\Charackters\Enemys\Scripts\TakingDamageEnemy.cs" />
     <Compile Include="Assets\_JumpOrDie\Charackters\Enemys\Dynamic\Scripts\EnemyFields.cs" />
     <Compile Include="Assets\_JumpOrDie\Charackters\Scripts\Stats\Visualization\HealthChange.cs" />
     <Compile Include="Assets\_JumpOrDie\Environment\Items\Scripts\InteractionWithItems.cs" />
@@ -123,7 +125,6 @@
     <Compile Include="Assets\_JumpOrDie\UI\Menu\Scripts\ChangeAudioSlider.cs" />
     <Compile Include="Assets\_JumpOrDie\Charackters\MainHero\Scripts\Movement\Animations\VerticalAnimation.cs" />
     <Compile Include="Assets\_JumpOrDie\UI\Game\Scripts\UIFields.cs" />
-    <Compile Include="Assets\_JumpOrDie\Charackters\Scripts\TakingDamage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

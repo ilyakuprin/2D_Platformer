@@ -12,13 +12,9 @@ namespace JumpOrDie
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.gameObject.TryGetComponent(out DeathMainHero mainHero))
+            if (collision.gameObject.TryGetComponent(out TakingDamage character))
             {
-                mainHero.Die();
-            }
-            else if (collision.gameObject.TryGetComponent(out DeathEnemy enemy))
-            {
-                enemy.Die();
+                character.TakeDamage(int.MaxValue);
             }
             else
             {
